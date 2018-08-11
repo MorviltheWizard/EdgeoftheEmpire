@@ -1,6 +1,6 @@
 import random
 
-d6 = ['one', 'two', 'three', 'four', 'five', 'six']
+d6 = ['Failure', 'No effect', 'Threat', 'No effect', 'Failure', 'Threat']
 
 def roll_dice():
     result = random.choice(d6)
