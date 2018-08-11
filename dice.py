@@ -35,20 +35,33 @@ def roll_difficulty_dice():
     return result
 
 
+def skill_check(skill, characteristic, difficulty, challenge, boost, setback):
+    # ability total is largest of (skill, characterstic) minus the lowest of thise
+    # proficiency total is smallest of (skill, characteristic)
+    if skill > characteristic:
+        ability = skill - characteristic
+        proficiency = characteristic
+    else:
+        ability = characteristic - skill
+        proficiency = skill
+    for i in range(0, ability):
+        print("Ability: {}".format(roll_ability_dice()))
+    for i in range(0, proficiency):
+        print("Proficiency: {}".format(roll_proficiency_dice()))
+    
 
 
 if __name__ == '__main__':
-    s = roll_setback_dice()
-    b = roll_boost_dice()
-    p = roll_proficiency_dice()
-    c = roll_challenge_dice()
-    a = roll_ability_dice()
-    d = roll_difficulty_dice()
-    print("Setback: {}".format(s))
-    print("Boost: {}".format(b))
-    print("Proficiency: {}".format(p))
-    print("Challenge: {}".format(c))
-    print("Ability: {}".format(a))
-    print("Difficulty: {}".format(d))
-
-
+    skill_check(3, 2, 2, 0, 1, 1)
+    # s = roll_setback_dice()
+    # b = roll_boost_dice()
+    # p = roll_proficiency_dice()
+    # c = roll_challenge_dice()
+    # a = roll_ability_dice()
+    # d = roll_difficulty_dice()
+    # print("Setback: {}".format(s))
+    # print("Boost: {}".format(b))
+    # print("Proficiency: {}".format(p))
+    # print("Challenge: {}".format(c))
+    # print("Ability: {}".format(a))
+    # print("Difficulty: {}".format(d))
