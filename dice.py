@@ -1,11 +1,11 @@
 import random
 
-d6 = ['Failure', 'No effect', 'Threat', 'No effect', 'Failure', 'Threat']
+setback_dice = ['Failure', 'No effect', 'Threat', 'No effect', 'Failure', 'Threat']
 
-def roll_dice():
-    result = random.choice(d6)
+def roll_setback_dice():
+    result = random.choice(setback_dice)
     return result
 
 if __name__ == '__main__':
-    dice_one = roll_dice()
-    print(dice_one)
+    s = roll_setback_dice()
+    print("Setback: {}".format(s))
