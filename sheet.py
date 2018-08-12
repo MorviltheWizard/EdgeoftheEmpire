@@ -51,12 +51,16 @@ class Sheet:
 
     def choose_race(self):
         self.race = choose ("What race are you?", self.races)
-        print("Chosen {}".format(self.races[self.race_]))
+        print("Chosen {}".format(self.races[self.race]))
+
+    def race_name(self):
+        return self.races[self.races]
     
 
     def print(self):
         print("*" * 80)
         print("* Name: {}".format(self.name))
+        print("* Race: {}".format(self.race))
         print("* Class: {}".format(self.class_name()))
         print("*" * 80)
 
@@ -66,6 +70,7 @@ if __name__ == '__main__':
     name = input()
     sheet = Sheet(name)
     sheet.choose_class()
+    sheet.choose_race()
     
     sheet.strength = random.randint(1,6)
     sheet.print()
