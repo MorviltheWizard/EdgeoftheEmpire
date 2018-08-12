@@ -19,11 +19,13 @@ def choose(question, options):
 class Sheet:
 
     classes = [
-        'Fighter',
-        'Druid',
-        'Cleric',
-        'Wizard',
-        'Bard',
+        'Bounty Hunter',
+        'Colonist',
+        'Explorer',
+        'Hired Gun',
+        'Smuggler',
+        'Technician',
+        'Force Sensitive Exile',
     ]
     
     def __init__(self, name):
@@ -35,6 +37,22 @@ class Sheet:
 
     def class_name(self):
         return self.classes[self.class_]
+
+    races = [
+        'Bothan',
+        'Droid',
+        'Gand',
+        'Human',
+        "Twi'lek",
+        'Rodian',
+        'Trandoshan',
+        'Wookie',
+    ]
+
+    def choose_race(self):
+        self.race = choose ("What race are you?", self.races)
+        print("Chosen {}".format(self.races[self.race_]))
+    
 
     def print(self):
         print("*" * 80)
