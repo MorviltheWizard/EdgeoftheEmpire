@@ -37,9 +37,10 @@ class Sheet:
         return self.classes[self.class_]
 
     def print(self):
-        print("*"*80)
+        print("*" * 80)
         print("* Name: {}".format(self.name))
         print("* Class: {}".format(self.class_name()))
+        print("*" * 80)
 
 if __name__ == '__main__':
     print("What is your character's name?")
