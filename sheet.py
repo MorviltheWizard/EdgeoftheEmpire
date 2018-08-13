@@ -98,6 +98,63 @@ class Sheet:
         self.obligation = choose ("What is your obligation?", self.obligations)
         print("Chosen {}".format(self.obligation))
 
+    def invest_experience(self):
+        if self.proficiency == "Assassin":
+            self.invest_experience = choose [
+            'Grit', 'Lethal Blows', 'Stalker', 'Dodge',
+        ]
+        if self.proficiency == "Gadgeteer"
+            self.invest_experience = choose [
+                'Brace', 'Toughened', 'Intimidating', 'Defensive stance',
+            ]
+        if self.proficiency == "Survivalist"
+            self.invest_experience = choose [
+                'Forager', 'Stalker', 'Outdoorsman', 'Expert Tracker',
+            ]
+        if self.proficiency == "Doctor" 
+            self.invest_experience = choose [
+                'Surgeon', 'Bacta Specialist', 'Grit', 'Resolve',
+            ]
+        if self.proficiency == "Politico"
+            self.invest_experience = choose [
+                'Kill with Kindness', 'Grit', 'Plausible Deniability', 'Toughened',
+            ]
+        if self.proficiency == "Scholar"
+            self.invest_experience = choose [
+                'Respected Scholar', 'Speaks Binary', 'Grit', 'Brace',
+            ]
+        if self.proficiency == "Fringer"
+            self.invest_experience = choose [
+                'Galaxy Mapper', 'Street Smarts', 'Rapid Recovery', 'Street Smarts'
+            ]
+        if self.proficiency == "Scout"
+            self.invest_experience = choose [
+                "Rapid Recovery", 'Stalker', 'Grit', 'Shortcut',
+            ]
+        if self.proficiency == "Trader"
+            self.invest_experience = choose [
+                'Know Somebody' 'Convincing Demeanor', 'Wheel and Deal', 'Smooth talker',
+            ]
+        if self.proficiency == "Bodyguard"
+            self.invest_experience = choose [
+                'Toughened', 'Barrage', 'Durable', 'Grit',
+            ]
+        if self.proficiency == "Marauder"
+            self.invest_experience = choose [
+                'Toughened', 'Frenzied Attack', 'Feral Strength', 'Lethal Blows',
+            ]
+        if self.proficiency == "Mercenary"
+            self.invest_experience = choose [
+                'Command', 'Second Wind', 'Point Blank', 'Side Step',
+            ]
+        
+        
+
+
+
+
+    
+    
     def print(self):
         print("*" * 80)
         print("* Name: {}".format(self.name))
@@ -118,6 +175,7 @@ if __name__ == '__main__':
     sheet.choose_race()
     sheet.choose_specialisation()
     sheet.choose_obligation()
+    
     
     sheet.strength = random.randint(1,6)
     sheet.print()
