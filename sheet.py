@@ -99,55 +99,86 @@ class Sheet:
         print("Chosen {}".format(self.obligation))
 
     def invest_experience(self):
-        if self.proficiency == "Assassin":
-            self.invest_experience = choose [
-            'Grit', 'Lethal Blows', 'Stalker', 'Dodge',
-        ]
-        if self.proficiency == "Gadgeteer"
-            self.invest_experience = choose [
-                'Brace', 'Toughened', 'Intimidating', 'Defensive stance',
-            ]
-        if self.proficiency == "Survivalist"
+        if self.specialisation == "Assassin":
+            self.invest_experience = choose('Where do you place your experience?', [
+             'Grit', 'Lethal Blows', 'Stalker', 'Dodge',
+            ])
+            
+        
+        if self.specialisation == "Gadgeteer":
+            self.invest_experience = choose('Where do you place your experience?', [
+                  'Brace', 'Toughened', 'Intimidating', 'Defensive stance',
+            ])
+            
+            
+        if self.specialisation == "Survivalist":
             self.invest_experience = choose [
                 'Forager', 'Stalker', 'Outdoorsman', 'Expert Tracker',
             ]
-        if self.proficiency == "Doctor" 
+        if self.specialisation == "Doctor":
             self.invest_experience = choose [
                 'Surgeon', 'Bacta Specialist', 'Grit', 'Resolve',
             ]
-        if self.proficiency == "Politico"
+        if self.specialisation == "Politico":
             self.invest_experience = choose [
                 'Kill with Kindness', 'Grit', 'Plausible Deniability', 'Toughened',
             ]
-        if self.proficiency == "Scholar"
+        if self.specialisation == "Scholar":
             self.invest_experience = choose [
                 'Respected Scholar', 'Speaks Binary', 'Grit', 'Brace',
             ]
-        if self.proficiency == "Fringer"
+        if self.specialisation == "Fringer":
             self.invest_experience = choose [
                 'Galaxy Mapper', 'Street Smarts', 'Rapid Recovery', 'Street Smarts'
             ]
-        if self.proficiency == "Scout"
+        if self.specialisation == "Scout":
             self.invest_experience = choose [
                 "Rapid Recovery", 'Stalker', 'Grit', 'Shortcut',
             ]
-        if self.proficiency == "Trader"
+        if self.specialisation == "Trader":
             self.invest_experience = choose [
                 'Know Somebody' 'Convincing Demeanor', 'Wheel and Deal', 'Smooth talker',
             ]
-        if self.proficiency == "Bodyguard"
+        if self.specialisation == "Bodyguard":
             self.invest_experience = choose [
                 'Toughened', 'Barrage', 'Durable', 'Grit',
             ]
-        if self.proficiency == "Marauder"
+        if self.specialisation == "Marauder":
             self.invest_experience = choose [
                 'Toughened', 'Frenzied Attack', 'Feral Strength', 'Lethal Blows',
             ]
-        if self.proficiency == "Mercenary"
+        if self.specialisation == "Mercenary":
             self.invest_experience = choose [
                 'Command', 'Second Wind', 'Point Blank', 'Side Step',
             ]
-        
+        if self.specialisation == "Pilot":
+            self.invest_experience = choose [
+                'Full Throttle', 'Skilled Jockey', 'Galaxy Mapper', 'Lets ride', 
+            ]    
+        if self.specialisation == "Scoundrel":
+            self.invest_experience = choose [
+                'Black Market Contacts', 'Convincing Demeanor', 'Quick Draw', 'Rapid Reaction'
+            ]
+        if self.specialisation == "Thief":
+            self.invest_experience = choose [
+                'Street Smarts', 'Black Market Contacts', 'Indistingishable', 'Bypass Security',
+            ]
+        if self.specialisation == "Mechanic":
+            self.invest_experience = choose [
+                'Gearhead', 'Toughened', 'Fine Tuning', 'Solid Repairs',
+            ]
+        if self.specialisation == "Outlaw Tech":
+            self.invest_experience = choose [
+                'Tinkerer', 'Utinni!', 'Speaks Binary', 'Tinkerer',
+            ]
+        if self.specialisation == "Slicer":
+            self.invest_experience = choose [
+                'Codebreaker', 'Grit', 'Technical Aptitude', 'Bypass Security',
+            ]
+        if self.specialisation == "Force Sensitive Exile":
+            self.invest_experience = choose [
+                'Uncanny Senses', 'Insight', 'Forager', 'Uncanny Reactions',
+            ]
         
 
 
@@ -161,7 +192,8 @@ class Sheet:
         print("* Race: {}".format(self.race))
         print("* Class: {}".format(self.class_))
         print("* Specialisation: {}".format(self.specialisation))
-        print("*obligation: {}".format(self.obligation))
+        print("* obligation: {}".format(self.obligation))
+        print("* invest_experience{}".format(self.invest_experience))
         print("*" * 80)
 
 
@@ -175,6 +207,7 @@ if __name__ == '__main__':
     sheet.choose_race()
     sheet.choose_specialisation()
     sheet.choose_obligation()
+    sheet.invest_experience()
     
     
     sheet.strength = random.randint(1,6)
