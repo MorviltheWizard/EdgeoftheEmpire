@@ -193,7 +193,7 @@ class Sheet:
         print("* Class: {}".format(self.class_))
         print("* Specialisation: {}".format(self.specialisation))
         print("* obligation: {}".format(self.obligation))
-        print("* invest_experience{}".format(self.invest_experience))
+        print("* First skill: {}".format(self.invest_experience))
         print("*" * 80)
 
 
