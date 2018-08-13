@@ -179,6 +179,16 @@ class Sheet:
             self.invest_experience = choose [
                 'Uncanny Senses', 'Insight', 'Forager', 'Uncanny Reactions',
             ]
+
+    motivations = [
+         'Ambition',
+         'Cause',    
+         'Relationship',
+         ]
+
+    def choose_motivation(self):
+         self.motivation = choose("What is your motivation?", self.motivations)
+         print ("Chosen {}".format(self.motivation))
         
 
 
@@ -194,6 +204,7 @@ class Sheet:
         print("* Specialisation: {}".format(self.specialisation))
         print("* obligation: {}".format(self.obligation))
         print("* First skill: {}".format(self.invest_experience))
+        print("*Motivation: {}".format(self.motivation))
         print("*" * 80)
 
 
@@ -208,6 +219,7 @@ if __name__ == '__main__':
     sheet.choose_specialisation()
     sheet.choose_obligation()
     sheet.invest_experience()
+    sheet.choose_motivation()
     
     
     sheet.strength = random.randint(1,6)
