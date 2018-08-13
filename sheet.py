@@ -94,9 +94,9 @@ class Sheet:
     ]
 
 
- def choose_obligation(self):
-    self.obligation = choose ("What is your obligation?", self.obligations)
-    print("Chosen {}".format(self.obligation))
+    def choose_obligation(self):
+        self.obligation = choose ("What is your obligation?", self.obligations)
+        print("Chosen {}".format(self.obligation))
 
     def print(self):
         print("*" * 80)
@@ -109,7 +109,7 @@ class Sheet:
 
 
 
- if __name__ == '__main__':
+if __name__ == '__main__':
     print("What is your character's name?")
     print("> ", end="")
     name = input()
@@ -117,7 +117,7 @@ class Sheet:
     sheet.choose_class()
     sheet.choose_race()
     sheet.choose_specialisation()
-    sheet.choose_obligation
+    sheet.choose_obligation()
     
     sheet.strength = random.randint(1,6)
     sheet.print()
