@@ -77,14 +77,53 @@ class Sheet:
             self.specialisation = choose('What specialisation of Technician', [
                 'Mechanic', 'Outlaw Tech', 'Slicer', 'Force Sensitive Exile',
             ])
-         
+
+
+obligations = [
+    'Addiction: This character has a strong addiction that he must keep feeding. While it could be a physical addiction, such as spice, alcohol or stims, it coculd also be a mental addiction such as gambling or law breaking. The character devotes a lot of the time to sating this addiction. Avoiding this obligation will begin with withdrawal. Every tiem withdrawal happens, you must roll difficulty dice',
+    'Betrayal: This obligation can work in one of two ways: either the character is the target of a deep and personal betrayal, or the chracter is the one who betrayed others. It could be as simple as a broken promise, or something seriou slike treason or mutiny. The target may seek answers, compensation or revenge.',
+    "Blackmail: Someone has discovered this PC's dirty secrets and using tht knowledge to their own gain. To make matters worse, the blackmailer has something that could be leaked. A holovid, bank records of a weapon used during a crime, and so on and so forth. The PC must do as he's told by the blackmailer, or have their little dirty secrets leaked to the holonet, or worse, the Empire.",
+    'Bounty: For some reason, this character has a price on his head. This may be a legel warrant, or a contract by a crime syndicate, collection agencies or just somebody who has had his honour attacked by the character. His background is how he earned his mark, and the character must always lay low in population centres.'
+    'Criminal: this character has a criminal record, or was accused of a crime he may not have committed. All Force Sensitive characters fall under this banner, as the Empire seeks out those who could potentially become Jedi and turn them to the Dark Side. This obligation may be settled by burying evidence, or efforts to prove his innocence',
+    'Debt: This character owes somebody a great deal of credits or something else. Maybe he has a huge gambling debt to a hutt, or is indebted to the Czerka corporation for his starship. To make matters worse, depending on who owns the debt. Even fully paying it off may not settle the score, as someone who can get that money can surely get more.',
+    'Dutybound: This PC has a deep sense of the duty that he feels compelled to fulfill, such as military service or making good on a contract or maybe just some thieves code. Unlike the oath obligation (see below) this character has a legel or ritualistic obligation to an organisation which could be difficult or detrimental should they not fulfill.', 
+    'Family: This character has a deep tis with his family that requires a lot of time and attention. Whether you are an Alderaanian Noble or a descendant of Onderon Royalty, this requires a lot of time working for the family, spending time with them or simply mediating squabbling family members.',
+    'Favor: This PC owes a big favour to somebody. Whether it be an Imperial Officer, who looked the other way to smuggled goods, or got him out of prison. If this obligation is selected, the one they owe a favour too could come knocking any time.',
+    'Oath: This character has sworn an oath that dictates their thoughts and actions. Whether it is too a God, or a way of living such as the Jedi Code. Whatever the case the oath should be serious and hinder the PC in his journey somehow. To not fulfill this oath will cause major internal and moral struggle.',
+    'Obsession: The PC has a rather unhealthy obsession he needs to fulfill. Whether it be to a region, a celebrity or some political icon, this character is often looked at with pity or amusement.',
+    'Responsibility: This character feels repsonsible for something. Where it be caring for Alderaanian children who survived their planets brutal destruction, or a strong connection to a mentor, this character must always act out their responsibility in game.',
+]
+
+
+def choose_obligation(self):
+    self.obligation = choose ("What is your obligation?", self.obligations)
+    print("Chosen {}".format(self.obligation))
+
     def print(self):
         print("*" * 80)
         print("* Name: {}".format(self.name))
         print("* Race: {}".format(self.race))
         print("* Class: {}".format(self.class_))
         print("* Specialisation: {}".format(self.specialisation))
+        print("*obligation: {}".format(self.obligation))
         print("*" * 80)
+
+obligations = [
+    'Addiction: This character has a strong addiction that he must keep feeding. While it could be a physical addiction, such as spice, alcohol or stims, it coculd also be a mental addiction such as gambling or law breaking. The character devotes a lot of the time to sating this addiction. Avoiding this obligation will begin with withdrawal. Every tiem withdrawal happens, you must roll difficulty dice',
+    'Betrayal: This obligation can work in one of two ways: either the character is the target of a deep and personal betrayal, or the chracter is the one who betrayed others. It could be as simple as a broken promise, or something seriou slike treason or mutiny. The target may seek answers, compensation or revenge.',
+    "Blackmail: Someone has discovered this PC's dirty secrets and using tht knowledge to their own gain. To make matters worse, the blackmailer has something that could be leaked. A holovid, bank records of a weapon used during a crime, and so on and so forth. The PC must do as he's told by the blackmailer, or have their little dirty secrets leaked to the holonet, or worse, the Empire.",
+    'Bounty: For some reason, this character has a price on his head. This may be a legel warrant, or a contract by a crime syndicate, collection agencies or just somebody who has had his honour attacked by the character. His background is how he earned his mark, and the character must always lay low in population centres.'
+    'Criminal: this character has a criminal record, or was accused of a crime he may not have committed. All Force Sensitive characters fall under this banner, as the Empire seeks out those who could potentially become Jedi and turn them to the Dark Side. This obligation may be settled by burying evidence, or efforts to prove his innocence',
+    'Debt: This character owes somebody a great deal of credits or something else. Maybe he has a huge gambling debt to a hutt, or is indebted to the Czerka corporation for his starship. To make matters worse, depending on who owns the debt. Even fully paying it off may not settle the score, as someone who can get that money can surely get more.',
+    'Dutybound: This PC has a deep sense of the duty that he feels compelled to fulfill, such as military service or making good on a contract or maybe just some thieves code. Unlike the oath obligation (see below) this character has a legel or ritualistic obligation to an organisation which could be difficult or detrimental should they not fulfill.', 
+    'Family: This character has a deep tis with his family that requires a lot of time and attention. Whether you are an Alderaanian Noble or a descendant of Onderon Royalty, this requires a lot of time working for the family, spending time with them or simply mediating squabbling family members.',
+    'Favor: This PC owes a big favour to somebody. Whether it be an Imperial Officer, who looked the other way to smuggled goods, or got him out of prison. If this obligation is selected, the one they owe a favour too could come knocking any time.',
+    'Oath: This character has sworn an oath that dictates their thoughts and actions. Whether it is too a God, or a way of living such as the Jedi Code. Whatever the case the oath should be serious and hinder the PC in his journey somehow. To not fulfill this oath will cause major internal and moral struggle.',
+    'Obsession: The PC has a rather unhealthy obsession he needs to fulfill. Whether it be to a region, a celebrity or some political icon, this character is often looked at with pity or amusement.',
+    'Responsibility: This character feels repsonsible for something. Where it be caring for Alderaanian children who survived their planets brutal destruction, or a strong connection to a mentor, this character must always act out their responsibility in game.',
+]
+
+
 
 if __name__ == '__main__':
     print("What is your character's name?")
@@ -94,6 +133,8 @@ if __name__ == '__main__':
     sheet.choose_class()
     sheet.choose_race()
     sheet.choose_specialisation()
+    sheet.choose_obligation
     
     sheet.strength = random.randint(1,6)
     sheet.print()
+
