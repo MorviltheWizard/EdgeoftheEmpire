@@ -26,7 +26,42 @@ class Sheet:
         'Smuggler',
         'Technician',
     ]
-    
+
+    races = {
+        'Droid': {
+            'Brawn': 1, 'Agility': 1, 'Cunning': 1, 'Willpower': 1, 'Presence': 1,
+            'Starting Experience': 175
+        },
+        'Bothan': {
+            'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 3, 'Willpower': 2, 'Presence': 2,
+            'Starting Experience': 100
+        },
+        'Gand': {
+            'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 3, 'Presence': 1,
+            'Starting Experience': 100
+        },
+        'Human': {
+            'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
+            'Starting Experience': 110
+        },
+        'Rodian': {
+            'Brawn': 2, 'Agility': 3, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
+            'Starting Experience': '100'
+        },
+        'Trandoshan': {
+            'Brawn': 3, 'Agility': 1, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
+            'Starting Experience': '90'
+        },
+        "Twi'lek": {
+            'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
+            'Starting experience': '100'
+        },
+        'Wookie': {
+            'Brawn': 3, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
+            'Starting experience': 90
+        },
+    }
+
     def __init__(self, name):
         self.name = name
 
@@ -37,19 +72,9 @@ class Sheet:
     def class_name(self):
         return self.classes[self.class_]
 
-    races = [
-        'Bothan',
-        'Droid',
-        'Gand',
-        'Human',
-        "Twi'lek",
-        'Rodian',
-        'Trandoshan',
-        'Wookie',
-    ]
 
     def choose_race(self):
-        self.race = choose ("What race are you?", self.races)
+        self.race = choose ("What race are you?", list(self.races.keys()))
         print("Chosen {}".format(self.race))
 
     def choose_specialisation(self):
@@ -190,40 +215,6 @@ class Sheet:
          self.motivation = choose("What is your motivation?", self.motivations)
          print ("Chosen {}".format(self.motivation)) 
 
-    races = {
-        'Droid': {
-            'Brawn': 1, 'Agility': 1, 'Cunning': 1, 'Willpower': 1, 'Presence': 1,
-            'Starting Experience': 175
-        },
-        'Bothan': {
-            'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 3, 'Willpower': 2, 'Presence': 2,
-            'Starting Experience': 100
-        },
-        'Gand': {
-            'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 3, 'Presence': 1,
-            'Starting Experience': 100
-        },
-        'Human': {
-            'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-            'Starting Experience': 110
-        },
-        'Rodian': {
-            'Brawn': 2, 'Agility': 3, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
-            'Starting Experience': '100'
-        },
-        'Trandoshan': {
-            'Brawn': 3, 'Agility': 1, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-            'Starting Experience': '90'
-        },
-        "Twi'lek": {
-            'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-            'Starting experience': '100'
-        },
-        'Wookie': {
-            'Brawn': 3, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
-            'Starting experience': 90
-        },
-    }
 
 
 
@@ -256,4 +247,3 @@ if __name__ == '__main__':
     
     sheet.strength = random.randint(1,6)
     sheet.print()
-
