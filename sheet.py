@@ -190,46 +190,40 @@ class Sheet:
          self.motivation = choose("What is your motivation?", self.motivations)
          print ("Chosen {}".format(self.motivation)) 
 
-    races = {}
-
-    races['Droid'] = {
-        'Brawn': 1, 'Agility': 1, 'Cunning': 1, 'Willpower': 1, 'Presence': 1,
-        'Starting Experience': 175
+    races = {
+        'Droid': {
+            'Brawn': 1, 'Agility': 1, 'Cunning': 1, 'Willpower': 1, 'Presence': 1,
+            'Starting Experience': 175
+        },
+        'Bothan': {
+            'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 3, 'Willpower': 2, 'Presence': 2,
+            'Starting Experience': 100
+        },
+        'Gand': {
+            'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 3, 'Presence': 1,
+            'Starting Experience': 100
+        },
+        'Human': {
+            'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
+            'Starting Experience': 110
+        },
+        'Rodian': {
+            'Brawn': 2, 'Agility': 3, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
+            'Starting Experience': '100'
+        },
+        'Trandoshan': {
+            'Brawn': 3, 'Agility': 1, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
+            'Starting Experience': '90'
+        },
+        "Twi'lek": {
+            'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
+            'Starting experience': '100'
+        },
+        'Wookie': {
+            'Brawn': 3, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
+            'Starting experience': 90
+        },
     }
-
-    races['Bothan'] = {
-        'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 3, 'Willpower': 2, 'Presence': 2,
-        'Starting Experience': 100
-    }
-
-    races['Gand'] = {
-        'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 3, 'Presence': 1,
-        'Starting Experience': 100
-    }
-
-    races['Human'] = {
-        'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-        'Starting Experience': 110
-    }
-
-    races['Rodian'] = {
-        'Brawn': 2, 'Agility': 3, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
-        'Starting Experience': '100'
-    }
-
-    races['Trandoshan'] = {
-        'Brawn': 3, 'Agility': 1, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-        'Starting Experience': '90'
-    }
-    races["Twi'lek"] = {
-        'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-        'Starting experience': '100'
-    }
-    races['Wookie'] = {
-        'Brawn': 3, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
-        'Starting experience': 90
-    }
-
 
 
 
