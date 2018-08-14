@@ -193,41 +193,41 @@ class Sheet:
     races = {}
 
      races['Droid'] = {
-         'Brawn': '1', 'Agility': '1', 'Cunning': '1', 'Willpower': '1', 'Presence': '1',
-         'Starting Experience': '175'
+         'Brawn': 1, 'Agility': 1, 'Cunning': 1, 'Willpower': 1, 'Presence': 1,
+         'Starting Experience': 175
      }
 
      races['Bothan'] = {
-         'Brawn': '1', 'Agility': '2', 'Intellect': '2', 'Cunning': '3', 'Willpower': '2', 'Presence': '2',
-         'Starting Experience': '100'
+         'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 3, 'Willpower': 2, 'Presence': 2,
+         'Starting Experience': 100
      }
 
      races['Gand'] = {
-         'Brawn': '2', 'Agility': '2', 'Intellect': '2', 'Cunning': '2', 'Willpower': '3', 'Presence': '1',
-         'Starting Experience': '100'
+         'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 3, 'Presence': 1,
+         'Starting Experience': 100
      }
 
      races['Human'] = {
-         'Brawn': '2', 'Agility': '2', 'Intellect': '2', 'Cunning': '2', 'Willpower': '2', 'Presence': '2',
-         'Starting Experience': '110'
+         'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
+         'Starting Experience': 110
      }
 
      races['Rodian'] = {
-         'Brawn': '2', 'Agility': '3', 'Intellect': '2', 'Cunning': '2', 'Willpower': '1', 'Presence': '2',
+         'Brawn': 2, 'Agility': 3, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
          'Starting Experience': '100'
      }
 
      races['Trandoshan'] = {
-         'Brawn': '3', 'Agility': '1', 'Intellect': '2', 'Cunning': '2', 'Willpower': '2', 'Presence': '2',
+         'Brawn': 3, 'Agility': 1, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
          'Starting Experience': '90'
      }
      races["Twi'lek"] = {
-         'Brawn': '1', 'Agility': '2', 'Intellect': '2', 'Cunning': '2', 'Willpower': '2', 'Presence', '2',
+         'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
          'Starting experience': '100'
      }
      races['Wookie'] = {
-         'Brawn': '3', 'Agility': '2', 'Intellect': '2', 'Cunning': '2', 'Willpower': '1', 'Presence': '2'
-         'Starting experience': '90'
+         'Brawn': 3, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
+         'Starting experience': 90
      }
 
 
