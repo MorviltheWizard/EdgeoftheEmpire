@@ -103,7 +103,7 @@ class Sheet:
                 'Mechanic', 'Outlaw Tech', 'Slicer', 'Force Sensitive Exile',
             ])
 
-    obligations = [
+    obligations = {
      'Addiction' = {
          'This character has a strong addiction that he must keep feeding. While it could be a physical addiction, such as spice, alcohol or stims, it coculd also be a mental addiction such as gambling or law breaking. The character devotes a lot of the time to sating this addiction. Avoiding this obligation will begin with withdrawal. Every tiem withdrawal happens, you must roll difficulty dice',
      }
@@ -141,7 +141,7 @@ class Sheet:
      'Responsibility' = {
          'This character feels repsonsible for something. Where it be caring for Alderaanian children who survived their planets brutal destruction, or a strong connection to a mentor, this character must always act out their responsibility in game.',
      }
-    ]
+    }
 
 
     def choose_obligation(self):
