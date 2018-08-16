@@ -1,6 +1,9 @@
 class Talents:
    def __init__(self,name,description,cost)
-       self.name = 'Grit'
+       self.name = name
+       self.description = description
+       self.cost = cost
+  self.name = 'Grit'
        self.description = 'Gain..'
        self.cost = 5
 
@@ -21,4 +24,4 @@ class Talents:
        self.cost = 25
 
 
-
+     
