@@ -62,6 +62,7 @@ class Sheet:
         },
     }
 
+
     def __init__(self, name):
         self.name = name
 
@@ -105,9 +106,9 @@ class Sheet:
 
     obligations = {
      'Addiction': 'This character has a strong addiction that he must keep feeding. While it could be a physical addiction, such as spice, alcohol or stims, it coculd also be a mental addiction such as gambling or law breaking. The character devotes a lot of the time to sating this addiction. Avoiding this obligation will begin with withdrawal. Every tiem withdrawal happens, you must roll difficulty dice',
-    'Betrayal': 'This obligation can work in one of two ways: either the character is the target of a deep and personal betrayal, or the chracter is the one who betrayed others. It could be as simple as a broken promise, or something serious like treason or mutiny. The target may seek answers, compensation or revenge.',
     
-
+     'Betrayal': 'This obligation can work in one of two ways: either the character is the target of a deep and personal betrayal, or the chracter is the one who betrayed others. It could be as simple as a broken promise, or something serious like treason or mutiny. The target may seek answers, compensation or revenge.',
+    
      'Blackmail': "Someone has discovered this PC's dirty secrets and using tht knowledge to their own gain. To make matters worse, the blackmailer has something that could be leaked. A holovid, bank records of a weapon used during a crime, and so on and so forth. The PC must do as he's told by the blackmailer, or have their little dirty secrets leaked to the holonet, or worse, the Empire.",
      
      'Bounty': 'For some reason, this character has a price on his head. This may be a legel warrant, or a contract by a crime syndicate, collection agencies or just somebody who has had his honour attacked by the character. His background is how he earned his mark, and the character must always lay low in population centres.',
@@ -131,90 +132,10 @@ class Sheet:
 
 
     def choose_obligation(self):
-        self.obligation = choose ("What is your obligation?", self.obligations)
+        self.obligation = choose ("What is your obligation?", list(self.obligations.keys()))
         print("Chosen {}".format(self.obligation))
 
-    def invest_experience(self):
-        if self.specialisation == "Assassin":
-            self.invest_experience = choose('Where do you place your experience?', [
-             'Grit', 'Lethal Blows', 'Stalker', 'Dodge',
-            ])
-            
-        
-        if self.specialisation == "Gadgeteer":
-            self.invest_experience = choose('Where do you place your experience?', [
-                  'Brace', 'Toughened', 'Intimidating', 'Defensive stance',
-            ])
-            
-            
-        if self.specialisation == "Survivalist":
-            self.invest_experience = choose [
-                'Forager', 'Stalker', 'Outdoorsman', 'Expert Tracker',
-            ]
-        if self.specialisation == "Doctor":
-            self.invest_experience = choose [
-                'Surgeon', 'Bacta Specialist', 'Grit', 'Resolve',
-            ]
-        if self.specialisation == "Politico":
-            self.invest_experience = choose [
-                'Kill with Kindness', 'Grit', 'Plausible Deniability', 'Toughened',
-            ]
-        if self.specialisation == "Scholar":
-            self.invest_experience = choose [
-                'Respected Scholar', 'Speaks Binary', 'Grit', 'Brace',
-            ]
-        if self.specialisation == "Fringer":
-            self.invest_experience = choose [
-                'Galaxy Mapper', 'Street Smarts', 'Rapid Recovery', 'Street Smarts'
-            ]
-        if self.specialisation == "Scout":
-            self.invest_experience = choose [
-                "Rapid Recovery", 'Stalker', 'Grit', 'Shortcut',
-            ]
-        if self.specialisation == "Trader":
-            self.invest_experience = choose [
-                'Know Somebody' 'Convincing Demeanor', 'Wheel and Deal', 'Smooth talker',
-            ]
-        if self.specialisation == "Bodyguard":
-            self.invest_experience = choose [
-                'Toughened', 'Barrage', 'Durable', 'Grit',
-            ]
-        if self.specialisation == "Marauder":
-            self.invest_experience = choose [
-                'Toughened', 'Frenzied Attack', 'Feral Strength', 'Lethal Blows',
-            ]
-        if self.specialisation == "Mercenary":
-            self.invest_experience = choose [
-                'Command', 'Second Wind', 'Point Blank', 'Side Step',
-            ]
-        if self.specialisation == "Pilot":
-            self.invest_experience = choose [
-                'Full Throttle', 'Skilled Jockey', 'Galaxy Mapper', 'Lets ride', 
-            ]    
-        if self.specialisation == "Scoundrel":
-            self.invest_experience = choose [
-                'Black Market Contacts', 'Convincing Demeanor', 'Quick Draw', 'Rapid Reaction'
-            ]
-        if self.specialisation == "Thief":
-            self.invest_experience = choose [
-                'Street Smarts', 'Black Market Contacts', 'Indistingishable', 'Bypass Security',
-            ]
-        if self.specialisation == "Mechanic":
-            self.invest_experience = choose [
-                'Gearhead', 'Toughened', 'Fine Tuning', 'Solid Repairs',
-            ]
-        if self.specialisation == "Outlaw Tech":
-            self.invest_experience = choose [
-                'Tinkerer', 'Utinni!', 'Speaks Binary', 'Tinkerer',
-            ]
-        if self.specialisation == "Slicer":
-            self.invest_experience = choose [
-                'Codebreaker', 'Grit', 'Technical Aptitude', 'Bypass Security',
-            ]
-        if self.specialisation == "Force Sensitive Exile":
-            self.invest_experience = choose [
-                'Uncanny Senses', 'Insight', 'Forager', 'Uncanny Reactions',
-            ]
+  
 
     motivations = [
          'Ambition',
@@ -227,9 +148,6 @@ class Sheet:
          print ("Chosen {}".format(self.motivation)) 
 
 
-
-
-
     def print(self):
         print("*" * 80)
         print("* Name: {}".format(self.name))
@@ -237,24 +155,19 @@ class Sheet:
         print("* Class: {}".format(self.class_))
         print("* Specialisation: {}".format(self.specialisation))
         print("* obligation: {}".format(self.obligation))
-        print("* First skill: {}".format(self.invest_experience))
         print("*Motivation: {}".format(self.motivation))
         print("*" * 80)
 
-
-
 if __name__ == '__main__':
-    print("What is your character's name?")
-    print("> ", end="")
-    name = input()
-    sheet = Sheet(name)
-    sheet.choose_class()
-    sheet.choose_race()
-    sheet.choose_specialisation()
-    sheet.choose_obligation()
-    sheet.invest_experience()
-    sheet.choose_motivation()
-    sheet.invest_experience()
+     print("What is your character's name?")
+     print("> ", end="")
+     name = input()
+     sheet = Sheet(name)
+     sheet.choose_class()
+     sheet.choose_race()
+     sheet.choose_specialisation()
+     sheet.choose_obligation()
+     sheet.choose_motivation()
     
-    sheet.strength = random.randint(1,6)
-    sheet.print()
+     sheet.strength = random.randint(1,6)
+     sheet.print()
