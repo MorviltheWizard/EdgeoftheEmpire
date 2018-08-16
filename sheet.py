@@ -73,7 +73,17 @@ class Sheet:
     def class_name(self):
         return self.classes[self.class_]
 
+    force_sensitivity = [
+        'Yes',
+        'No',
+    ]
+    
+    def choose_force_sensitivity(self):
+        self.force_sensitivity = choose("Are you force sensitive?", self.force_sensitivity)
+        print("Chosen {}".format(self.force_sensitivity))
 
+    
+    
     def choose_race(self):
         self.race = choose ("What race are you?", list(self.races.keys()))
         print("Chosen {}".format(self.race))
@@ -81,27 +91,27 @@ class Sheet:
     def choose_specialisation(self):
         if self.class_ == "Bounty Hunter":
             self.specialisation = choose("What specialisation of Bounty Hunter?", [
-                'Assassin', 'Gadgeteer', 'Survivalist', 'Force Sensitive Exile',
+                'Assassin', 'Gadgeteer', 'Survivalist',
             ])   
         if self.class_ == "Colonist":
             self.specialisation = choose('What specialisation of Colonist?', [
-                'Doctor', 'Politico', 'Scholar', 'Force Sensitive Exile',
+                'Doctor', 'Politico', 'Scholar',
             ])
         if self.class_ == "Explorer":
             self.specialisation = choose('What specialisation of Explorer?', [
-                'Fringer', 'Scout', 'Trader', 'Force Sensitive Exile',
+                'Fringer', 'Scout', 'Trader', 
             ])
         if self.class_ == "Hired Gun":
             self. specialisation = choose('What specialisation of Hired Gun?', [
-                'Bodyguard', 'Marauder', 'Mercenary soldier', 'Force Sensitive Exile',
+                'Bodyguard', 'Marauder', 'Mercenary soldier',
             ])
         if self.class_ == "Smuggler":
             self.specialisation = choose('What specialisation of Smuggler?', [
-                'Scoundrel', 'Pilot', 'Thief', 'Force Sensitive Exile',
+                'Scoundrel', 'Pilot', 'Thief', 
             ])
         if self.class_ == "Technician":
             self.specialisation = choose('What specialisation of Technician', [
-                'Mechanic', 'Outlaw Tech', 'Slicer', 'Force Sensitive Exile',
+                'Mechanic', 'Outlaw Tech', 'Slicer', 
             ])
 
     obligations = {
@@ -155,7 +165,8 @@ class Sheet:
         print("* Class: {}".format(self.class_))
         print("* Specialisation: {}".format(self.specialisation))
         print("* obligation: {}".format(self.obligation))
-        print("*Motivation: {}".format(self.motivation))
+        print("* Motivation: {}".format(self.motivation))
+        print("* Force Sensitivity: {}".format(self.force_sensitivity))
         print("*" * 80)
 
 if __name__ == '__main__':
@@ -168,6 +179,7 @@ if __name__ == '__main__':
      sheet.choose_specialisation()
      sheet.choose_obligation()
      sheet.choose_motivation()
+     sheet.choose_force_sensitivity()
     
      sheet.strength = random.randint(1,6)
      sheet.print()
