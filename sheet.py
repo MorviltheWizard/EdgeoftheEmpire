@@ -31,34 +31,42 @@ class Sheet:
         'Droid': {
             'Brawn': 1, 'Agility': 1, 'Cunning': 1, 'Willpower': 1, 'Presence': 1,
             'Starting_Experience': 175
+            'Starting_Credits': 500
         },
         'Bothan': {
             'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 3, 'Willpower': 2, 'Presence': 2,
             'Starting_Experience': 100
+            'Starting_Credits': 500
         },
         'Gand': {
             'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 3, 'Presence': 1,
             'Starting_Experience': 100
+            'Starting_Credits': 500
         },
         'Human': {
             'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
             'Starting_Experience': 110
+            'Starting_Credits': 500
         },
         'Rodian': {
             'Brawn': 2, 'Agility': 3, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
             'Starting_Experience': 100
+            'Starting_Credits': 500
         },
         'Trandoshan': {
             'Brawn': 3, 'Agility': 1, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
             'Starting_Experience': 90
+            'Starting_Credits': 500
         },
         "Twi'lek": {
             'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
             'Starting_Experience': 100
+            'Starting_Credits': 500
         },
         'Wookie': {
             'Brawn': 3, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
             'Starting_Experience': 90
+            'Starting_Credits': 500
         },
     }
 
@@ -85,11 +93,7 @@ class Sheet:
     if force_sensitivity == 'Yes':
          Starting_Experience - 20 
 
-    
-    
-    
-    
-    
+
     def choose_race(self):
         self.race = choose ("What race are you?", list(self.races.keys()))
         print("Chosen {}".format(self.race))
@@ -163,6 +167,22 @@ class Sheet:
          self.motivation = choose("What is your motivation?", self.motivations)
          print ("Chosen {}".format(self.motivation)) 
 
+    print = "You have a budget of 500 Credits"
+        
+    weapons = [
+        'Merr-Sonn Q2 Holdout (Holdout Pistol) Price: 200 Credits',
+        'Imperial Army Scout Trooper Pistol (Holdout Pistol) Price: 200 Credits',
+        'Merr-Sonn Model 44 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits',
+        'Blastech DL-18 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits',
+        'Blastech DH-17 Blaster (Blaster Pistol) Price: 400',
+        'Blastech SE-14 (Blaster Pistol) Price: 400',
+    ]
+
+    def choose_weapons(self):
+        self.weapons = choose("What weapon do you choose?", self.weapons)
+        print ("Chosen {}".format(self.weapons))
+
+
 
     def print(self):
         print("*" * 80)
@@ -173,6 +193,7 @@ class Sheet:
         print("* obligation: {}".format(self.obligation))
         print("* Motivation: {}".format(self.motivation))
         print("* Force Sensitivity: {}".format(self.force_sensitivity))
+        print("* Weapon: {}".format(self.weapons))
         print("*" * 80)
 
 if __name__ == '__main__':
@@ -186,6 +207,7 @@ if __name__ == '__main__':
      sheet.choose_obligation()
      sheet.choose_motivation()
      sheet.choose_force_sensitivity()
+     sheet.choose_weapons()
     
      sheet.strength = random.randint(1,6)
      sheet.print()
