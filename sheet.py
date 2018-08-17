@@ -178,6 +178,19 @@ class Sheet:
         'Blastech SE-14 (Blaster Pistol) Price: 400',
     ]
 
+    if weapons == 'Merr-Sonn Q2 Holdout (Holdout Pistol) Price: 200 Credits':
+        Starting_Credits - 200 
+    if weapons == 'Imperial Army Scout Trooper Pistol (Holdout Pistol) Price: 200 Credits':
+        Starting_Credits - 200
+    if weapons == 'Merr-Sonn Model 44 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits':
+        Starting_Credits - 300
+    if weapons == 'Blastech DL-18 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits':
+        Starting_Credits - 300
+    if weapons == 'Blastech DH-17 Blaster (Blaster Pistol) Price: 400':
+        Starting_Credits - 400
+    if weapons == 'Blastech SE-14 (Blaster Pistol) Price: 400':
+        Starting_Credits - 400
+
     def choose_weapons(self):
         self.weapons = choose("What weapon do you choose?", self.weapons)
         print ("Chosen {}".format(self.weapons))
