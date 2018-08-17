@@ -46,15 +46,15 @@ class Sheet:
         },
         'Rodian': {
             'Brawn': 2, 'Agility': 3, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
-            'Starting_Experience': '100'
+            'Starting_Experience': 100
         },
         'Trandoshan': {
             'Brawn': 3, 'Agility': 1, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-            'Starting_Experience': '90'
+            'Starting_Experience': 90
         },
         "Twi'lek": {
             'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-            'Starting_Experience': '100'
+            'Starting_Experience': 100
         },
         'Wookie': {
             'Brawn': 3, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
@@ -82,8 +82,8 @@ class Sheet:
         self.force_sensitivity = choose("Are you force sensitive?", self.force_sensitivity)
         print("Chosen {}".format(self.force_sensitivity))
 
-   if force_sensitivity = 'Yes':
-   Starting_Experience - 20 
+    if force_sensitivity == 'Yes':
+         Starting_Experience - 20 
 
     
     
