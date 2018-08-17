@@ -82,7 +82,7 @@ class Sheet:
         self.force_sensitivity = choose("Are you force sensitive?", self.force_sensitivity)
         print("Chosen {}".format(self.force_sensitivity))
 
-   if force_sensitivity = 'Yes',
+   if force_sensitivity = 'Yes':
    Starting_Experience - 20 
 
     
