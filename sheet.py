@@ -30,43 +30,43 @@ class Sheet:
     races = {
         'Droid': {
             'Brawn': 1, 'Agility': 1, 'Cunning': 1, 'Willpower': 1, 'Presence': 1,
-            'Starting_Experience': 175
-            'Starting_Credits': 500
+            'Starting_Experience': 175,
+            'Starting_Credits': 500,
         },
         'Bothan': {
             'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 3, 'Willpower': 2, 'Presence': 2,
-            'Starting_Experience': 100
-            'Starting_Credits': 500
+            'Starting_Experience': 100,
+            'Starting_Credits': 500,
         },
         'Gand': {
             'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 3, 'Presence': 1,
-            'Starting_Experience': 100
-            'Starting_Credits': 500
+            'Starting_Experience': 100,
+            'Starting_Credits': 500,
         },
         'Human': {
             'Brawn': 2, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-            'Starting_Experience': 110
-            'Starting_Credits': 500
+            'Starting_Experience': 110,
+            'Starting_Credits': 500,
         },
         'Rodian': {
             'Brawn': 2, 'Agility': 3, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
-            'Starting_Experience': 100
-            'Starting_Credits': 500
+            'Starting_Experience': 100,
+            'Starting_Credits': 500,
         },
         'Trandoshan': {
             'Brawn': 3, 'Agility': 1, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-            'Starting_Experience': 90
-            'Starting_Credits': 500
+            'Starting_Experience': 90,
+            'Starting_Credits': 500,
         },
         "Twi'lek": {
             'Brawn': 1, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 2, 'Presence': 2,
-            'Starting_Experience': 100
-            'Starting_Credits': 500
+            'Starting_Experience': 100,
+            'Starting_Credits': 500,
         },
         'Wookie': {
             'Brawn': 3, 'Agility': 2, 'Intellect': 2, 'Cunning': 2, 'Willpower': 1, 'Presence': 2,
-            'Starting_Experience': 90
-            'Starting_Credits': 500
+            'Starting_Experience': 90,
+            'Starting_Credits': 500,
         },
     }
 
