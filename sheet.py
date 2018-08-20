@@ -174,8 +174,15 @@ class Sheet:
         'Imperial Army Scout Trooper Pistol (Holdout Pistol) Price: 200 Credits',
         'Merr-Sonn Model 44 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits',
         'Blastech DL-18 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits',
-        'Blastech DH-17 Blaster (Blaster Pistol) Price: 400',
-        'Blastech SE-14 (Blaster Pistol) Price: 400',
+        'Blastech DH-17 Blaster (Blaster Pistol) Price: 400 Credits',
+        'Blastech SE-14 (Blaster Pistol) Price: 400 Credits',
+        'Oriolanis Striker Projectile Pistol (Slugthrower Pistol) Price: 100 Credits',
+        'Dresselian Projectile Rifle (Slughthrower Rifle) Price: 250 Credits',
+        'Czerka Arms 6-2Aug2 Hunting Rifle (Slughthrower Rifle) Price: 250 Credits',
+        'Corellian Personal Defence X-21 (Shock Gloves) Price: 300 Credits',
+        'Gaffi Stick (Gaffi Stick) Price: 100 Credits',
+        'Sorosuub Controller FP (Force Pike) Price: 500 Credits',
+        'Merr-Sonn Treppus-2 Vibroblade (Vibroknife) Price: 250 Credits',
     ]
 
     if weapons == 'Merr-Sonn Q2 Holdout (Holdout Pistol) Price: 200 Credits':
@@ -186,16 +193,33 @@ class Sheet:
         Starting_Credits - 300
     if weapons == 'Blastech DL-18 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits':
         Starting_Credits - 300
-    if weapons == 'Blastech DH-17 Blaster (Blaster Pistol) Price: 400':
+    if weapons == 'Blastech DH-17 Blaster (Blaster Pistol) Price: 400 Credits':
         Starting_Credits - 400
-    if weapons == 'Blastech SE-14 (Blaster Pistol) Price: 400':
+    if weapons == 'Blastech SE-14 (Blaster Pistol) Price: 400 Credits':
         Starting_Credits - 400
+    if weapons == 'Oriolanis Striker Projectile Pistol (Slugthrower Pistol) Price: 100 Credits': 
+        Starting_Credits - 100
+    if weapons == 'Dresselian Projectile Rifle (Slugthrower Rifle) Price: 250 Credits':
+        Starting_Credits - 250
+    if weapons == 'Czerka Arms 5-1Aug2 Hunting Rifle (Slugthrower Rifle) Price: 250 Credits':
+        Starting_Credits - 250
+    if weapons == 'Correliann Personal Defense X-21 (Shock Gloves) Price: 300 Credits':
+        Starting_Credits - 300 
+    if weapons == 'Gaffi Stick (Gaffi Stick) Price: 100 Credits':
+        Starting_Credits - 100
+    if weapons == 'Sorosuub Controller FP (Force Pike) Price: 500 Credits':
+        Starting_Credits - 500
+    if weapons == 'Merr-Sonn Treppus-2 Vibroblade (Vibroknife) Price: 250 Credits':
+        Starting_Credits - 250
+    
+    
 
     def choose_weapons(self):
         self.weapons = choose("What weapon do you choose?", self.weapons)
         print ("Chosen {}".format(self.weapons))
+ 
 
-
+    
 
     def print(self):
         print("*" * 80)
