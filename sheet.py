@@ -91,11 +91,12 @@ class Sheet:
         print("Chosen {}".format(self.force_sensitivity))
 
         if self.force_sensitivity == 'Yes':
-            self.Starting_Experience - 20 
+            self.Starting_Experience -= 20 
 
 
     def choose_race(self):
         self.race = choose ("What race are you?", list(self.races.keys()))
+        self.Starting_Experience = self.races[self.race]['Starting_Experience']
         print("Chosen {}".format(self.race))
 
     def choose_specialisation(self):
@@ -250,8 +251,6 @@ if __name__ == '__main__':
      sheet.choose_motivation()
      sheet.choose_force_sensitivity()
      sheet.choose_weapons()
-     sheet.credits()
-     sheet.Starting_Credits()
     
      sheet.strength = random.randint(1,6)
      sheet.print()
