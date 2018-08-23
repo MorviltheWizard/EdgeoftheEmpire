@@ -90,8 +90,8 @@ class Sheet:
         self.force_sensitivity = choose("Are you force sensitive?", self.force_sensitivity)
         print("Chosen {}".format(self.force_sensitivity))
 
-    if force_sensitivity == 'Yes':
-         Starting_Experience - 20 
+        if self.force_sensitivity == 'Yes':
+            self.Starting_Experience - 20 
 
 
     def choose_race(self):
@@ -163,12 +163,6 @@ class Sheet:
          'Relationship',
          ]
 
-    def choose_motivation(self):
-         self.motivation = choose("What is your motivation?", self.motivations)
-         print ("Chosen {}".format(self.motivation)) 
-
-    print = "You have a budget of 500 Credits"
-        
     weapons = [
         'Merr-Sonn Q2 Holdout (Holdout Pistol) Price: 200 Credits',
         'Imperial Army Scout Trooper Pistol (Holdout Pistol) Price: 200 Credits',
@@ -184,41 +178,51 @@ class Sheet:
         'Sorosuub Controller FP (Force Pike) Price: 500 Credits',
         'Merr-Sonn Treppus-2 Vibroblade (Vibroknife) Price: 250 Credits',
     ]
+    
+    
 
-    if weapons == 'Merr-Sonn Q2 Holdout (Holdout Pistol) Price: 200 Credits':
-        Starting_Credits - 200 
-    if weapons == 'Imperial Army Scout Trooper Pistol (Holdout Pistol) Price: 200 Credits':
-        Starting_Credits - 200
-    if weapons == 'Merr-Sonn Model 44 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits':
-        Starting_Credits - 300
-    if weapons == 'Blastech DL-18 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits':
-        Starting_Credits - 300
-    if weapons == 'Blastech DH-17 Blaster (Blaster Pistol) Price: 400 Credits':
-        Starting_Credits - 400
-    if weapons == 'Blastech SE-14 (Blaster Pistol) Price: 400 Credits':
-        Starting_Credits - 400
-    if weapons == 'Oriolanis Striker Projectile Pistol (Slugthrower Pistol) Price: 100 Credits': 
-        Starting_Credits - 100
-    if weapons == 'Dresselian Projectile Rifle (Slugthrower Rifle) Price: 250 Credits':
-        Starting_Credits - 250
-    if weapons == 'Czerka Arms 5-1Aug2 Hunting Rifle (Slugthrower Rifle) Price: 250 Credits':
-        Starting_Credits - 250
-    if weapons == 'Correliann Personal Defense X-21 (Shock Gloves) Price: 300 Credits':
-        Starting_Credits - 300 
-    if weapons == 'Gaffi Stick (Gaffi Stick) Price: 100 Credits':
-        Starting_Credits - 100
-    if weapons == 'Sorosuub Controller FP (Force Pike) Price: 500 Credits':
-        Starting_Credits - 500
-    if weapons == 'Merr-Sonn Treppus-2 Vibroblade (Vibroknife) Price: 250 Credits':
-        Starting_Credits - 250
-    
-    
+    def choose_motivation(self):
+        self.motivation = choose("What is your motivation?", self.motivations)
+        print ("Chosen {}".format(self.motivation)) 
+
+        print ("You have a budget of 500 Credits")
+            
+
+
+        
 
     def choose_weapons(self):
-        self.weapons = choose("What weapon do you choose?", self.weapons)
+        self.weapon = choose("What weapon do you choose?", self.weapons)
         print ("Chosen {}".format(self.weapons))
  
-
+        Starting_Credits = self.races[self.race]['Starting_Credits']
+        if self.weapon == 'Merr-Sonn Q2 Holdout (Holdout Pistol) Price: 200 Credits':
+            self.credits = Starting_Credits - 200 
+        if self.weapon == 'Imperial Army Scout Trooper Pistol (Holdout Pistol) Price: 200 Credits':
+            self.credits = Starting_Credits - 200
+        if self.weapon == 'Merr-Sonn Model 44 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits':
+             self.credits = Starting_Credits - 300
+        if self.weapon == 'Blastech DL-18 Blaster Pistol (Light Blaster Pistol) Price: 300 Credits':
+             self.credits = Starting_Credits - 300
+        if self.weapon == 'Blastech DH-17 Blaster (Blaster Pistol) Price: 400 Credits':
+             self.credits = Starting_Credits - 400
+        if self.weapon == 'Blastech SE-14 (Blaster Pistol) Price: 400 Credits':
+             self.credits = Starting_Credits - 400
+        if self.weapon == 'Oriolanis Striker Projectile Pistol (Slugthrower Pistol) Price: 100 Credits': 
+             self.credits = Starting_Credits - 100
+        if self.weapon == 'Dresselian Projectile Rifle (Slugthrower Rifle) Price: 250 Credits':
+             self.credits = Starting_Credits - 250
+        if self.weapon == 'Czerka Arms 5-1Aug2 Hunting Rifle (Slugthrower Rifle) Price: 250 Credits':
+             self.credits = Starting_Credits - 250
+        if self.weapon == 'Correliann Personal Defense X-21 (Shock Gloves) Price: 300 Credits':
+             self.credits = Starting_Credits - 300 
+        if self.weapon == 'Gaffi Stick (Gaffi Stick) Price: 100 Credits':
+             self.credits = Starting_Credits - 100
+        if self.weapon == 'Sorosuub Controller FP (Force Pike) Price: 500 Credits':
+             self.credits = Starting_Credits - 500
+        if self.weapon == 'Merr-Sonn Treppus-2 Vibroblade (Vibroknife) Price: 250 Credits':
+             self.credits = Starting_Credits - 250
+     
     
 
     def print(self):
@@ -231,6 +235,7 @@ class Sheet:
         print("* Motivation: {}".format(self.motivation))
         print("* Force Sensitivity: {}".format(self.force_sensitivity))
         print("* Weapon: {}".format(self.weapons))
+        print("* Credits: {}".format(self.credits))
         print("*" * 80)
 
 if __name__ == '__main__':
@@ -245,6 +250,8 @@ if __name__ == '__main__':
      sheet.choose_motivation()
      sheet.choose_force_sensitivity()
      sheet.choose_weapons()
+     sheet.credits()
+     sheet.Starting_Credits()
     
      sheet.strength = random.randint(1,6)
      sheet.print()
