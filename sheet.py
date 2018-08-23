@@ -235,7 +235,7 @@ class Sheet:
         print("* obligation: {}".format(self.obligation))
         print("* Motivation: {}".format(self.motivation))
         print("* Force Sensitivity: {}".format(self.force_sensitivity))
-        print("* Weapon: {}".format(self.weapons))
+        print("* Weapon: {}".format(self.weapon))
         print("* Credits: {}".format(self.credits))
         print("*" * 80)
 
